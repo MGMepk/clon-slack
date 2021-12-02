@@ -1,1 +1,87 @@
+html{ scroll-behavior: smooth;}
 
+nav{ display: flex; }
+
+nav>img{
+    display: flex;
+    flex-direction: row;
+    width: 9em;
+}
+
+ul>li::marker{
+    content: "";
+}
+
+main { background-color: #DEDEDE;}
+header>img{
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+
+@media (max-width: 768px){    
+
+
+    nav>ul{ display: flex; }
+
+    main>div{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9,1fr);
+
+    }
+
+    main:last-child{
+        display: grid;
+    }
+
+    main>div>img{
+        width: 60%;
+        padding-left: 1em;
+        display: block;
+        margin: auto;
+    }
+
+    footer>div{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows:  2fr repeat(2,1fr);
+    }
+
+    footer>div>img{
+        grid-column: 2/1;
+    }
+
+  
+
+@media (max-width: 961px){
+
+    nav>img{
+        display: flex;
+        flex-direction: row;
+        width: 9em;
+    }
+
+    nav>ul{ display: flex; }
+}
+
+@media (max-width: 1024px){
+    nav>img{
+        display: flex;
+        flex-direction: row;
+        width: 9em;
+    }
+
+    nav>ul{ display: flex; }
+}
+
+@media (min-width: 1024px){
+    nav>img{
+        display: flex;
+        flex-direction: row;
+        width: 9em;
+    }
+
+    nav>ul{ display: flex; }
+}
