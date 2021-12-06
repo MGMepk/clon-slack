@@ -1,35 +1,108 @@
+*{ box-sizing: border-box;}
+
 html{ scroll-behavior: smooth;}
 
-nav{ display: flex; }
+nav{ 
+    display: flex;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
 nav>img{
     display: flex;
     flex-direction: row;
-    width: 9em;
+    width: 8em;
 }
 
 ul>li::marker{
     content: "";
 }
 
-main { background-color: #DEDEDE;}
+nav>ul{
+    justify-content: space-between;
+}
+
+nav>ul>li{
+    align-self: center;
+}
+
+.fa-bars{
+    align-self:center;
+    padding-right: 2em;
+}
+
+.fa-times{
+    display: none;
+}
+
+main {
+    background-color: #DEDEDE;
+    text-align: center;
+}
+
 header>img{
     width: 100%;
     display: block;
     margin: auto;
 }
 
+header{
+    text-align: justify;
+    padding-top: 3em;
+}
+
+footer>ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer>ul:first-child{
+    font-weight: bold;
+}
+
+main div:first-child>button{
+    color: blue;
+}
+
+header>button{
+    color: white;
+    background-color: blue;
+}
+
+main div:last-child>button{
+    color: white;
+    background-color: blue;
+}
+
 
 @media (max-width: 768px){    
+    header{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5,1fr);
+    }
 
-
-    nav>ul{ display: flex; }
+    header>button{
+        padding: 1em;
+    }
 
     main>div{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(9,1fr);
+        gap: 1em;
+        grid-template-rows: repeat(9,2fr);
+    }
 
+    nav>ul>li{
+        display: none;
+    }
+
+    .fa-bars{
+        display:flex;
     }
 
     main:last-child{
@@ -45,35 +118,154 @@ header>img{
 
     footer>div{
         display: grid;
+        gap: 1em;
         grid-template-columns: repeat(2,1fr);
-        grid-template-rows:  2fr repeat(2,1fr);
+        grid-template-rows: 1fr 1fr 1fr;
     }
 
     footer>div>img{
-        grid-column: 2/1;
+        grid-column-start: 1;
+        grid-column-end: 3;
     }
 
-  
-
-@media (max-width: 961px){
-
-    nav>img{
-        display: flex;
-        flex-direction: row;
-        width: 9em;
-    }
-
-    nav>ul{ display: flex; }
 }
 
-@media (max-width: 1024px){
+@media (min-width: 768px) and (max-width: 961px){
+
     nav>img{
         display: flex;
         flex-direction: row;
         width: 9em;
     }
 
-    nav>ul{ display: flex; }
+    nav>ul>li{
+        display: none;
+    }
+    
+    .fa-bars{
+        display:flex;
+    }
+ 
+
+    header{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5,1fr);
+    }
+
+
+     main>div{
+        display: grid;
+        gap: 1em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(6,1fr);
+    } 
+
+    main>div>h2{
+        text-align: center;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    main>div>p{
+        text-align: center;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    main>div>button{
+        text-align: center;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+
+    main>div>img{
+        width: 60%;
+        padding-left: 1em;
+        display: block;
+        margin: auto;
+    }
+
+    footer>div{
+        display: grid;
+        gap: 1em;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: 1fr;
+    }
+
+    footer>div>img{
+        align-self: center;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+}
+
+@media (min-width: 960px) and (max-width: 1024px){
+    nav>img{
+        display: flex;
+        flex-direction: row;
+        width: 9em;
+    }
+
+    nav>ul{
+        display: flex;
+    }
+
+    nav>ul>li{
+        display: none;
+    }
+
+    .fa-bars{
+        display:flex;
+    }
+
+    main div:first-child{
+        display: grid;
+        gap: 1em;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(5,1fr);
+    } 
+
+    main div:first-child>h2{
+        text-align: center;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    main div:first-child>p{
+        text-align: center;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    main div:first-child>button{
+        text-align: center;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    main>div>img{
+        width: 60%;
+        padding-left: 1em;
+        display: block;
+        margin: auto;
+    }
+
+    footer>div{
+        display: grid;
+        gap: 1em;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: 1fr;
+    }
+
+    footer>div>img{
+        align-self: center;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
 }
 
 @media (min-width: 1024px){
@@ -83,5 +275,67 @@ header>img{
         width: 9em;
     }
 
-    nav>ul{ display: flex; }
+    nav>ul{
+        display: flex;
+    }
+
+    nav>ul>li{
+        display: flex;
+    }
+
+    .fa-bars{
+        display: none;
+    }
+
+    main div:first-child{
+        display: grid;
+        gap: 1em;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(5,1fr);
+    } 
+
+    main div:first-child>h2{
+        text-align: center;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    main div:first-child>p{
+        text-align: center;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    main div:first-child>button{
+        text-align: center;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    main>div>img{
+        width: 60%;
+        padding-left: 1em;
+        display: block;
+        margin: auto;
+    }
+
+    main div:last-child{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    footer>div{
+        display: grid;
+        gap: 1em;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: 1fr;
+    }
+
+    footer>div>img{
+        align-self: center;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
 }
