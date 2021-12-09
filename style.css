@@ -164,15 +164,13 @@ footer>div:last-child{
         grid-column-end: 4;
     }
 
-    /* #fab{
-        grid-column-start: 2;
-        grid-column-end: 4;
-    } */
-
-
-
-
-
+     #fab{
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         align-content: center;
+    }
+    
 }
 
 @media (min-width: 768px) and (max-width: 961px){
