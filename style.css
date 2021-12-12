@@ -22,11 +22,14 @@ ul>li::marker{
 }
 
 nav>ul{
+    display: flex;
     justify-content: space-between;
 }
 
 nav>ul>li{
+    display: flex;
     align-self: center;
+    padding: 5px;
 }
 
 .fa-bars{
@@ -80,6 +83,10 @@ main div:last-child>button{
 
 footer>div:last-child{
     background-color: #F5F5F5;
+}
+
+footer>div:last-child>ul>li{
+    padding: 5px;
 }
 
 
@@ -316,6 +323,42 @@ footer>div:last-child{
         display:flex;
     }
 
+    header{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 6em 1fr 30px ;
+    }
+
+    header>h1{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        font-size: 4em;
+        text-align: center;      
+    }
+
+    header>p{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        padding: 3em;
+        text-align: justify;
+    }
+
+    header>input{
+        grid-column-start:1;
+        grid-column-end: 2;
+    }
+
+    header>button{
+        grid-column-start:2;
+        grid-column-end: 3;
+
+    }
+
+    header>img{
+        grid-column-start:1;
+        grid-column-end: 4;
+    }
+
     main div:first-child{
         display: grid;
         gap: 1em;
@@ -381,7 +424,21 @@ footer>div:last-child{
         display: flex;
         justify-content: space-between;
         align-content: space-between;
-        padding-left: 25%;
+        padding-left: 30%;
+    }
+
+    footer>div:last-child>div>span{
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        padding: 2px;
+    }
+
+    footer>div:last-child>div>i{
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        padding: 2px;
     }
 
 }
@@ -473,8 +530,10 @@ footer>div:last-child{
 
     footer>div:last-child>ul{
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        align-items: space-between;
         flex-direction: row;
+        flex-wrap: wrap;
     }
 
     footer>div:last-child>div>img{
@@ -485,7 +544,20 @@ footer>div:last-child{
         display: flex;
         justify-content: space-between;
         align-content: space-between;
-        padding-left: 25%;
+        padding-left: 60%;
     }
 
+    footer>div:last-child>div>span{
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        padding: 2px;
+    }
+
+    footer>div:last-child>div>i{
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        padding: 2px;
+    }
 }
